@@ -8,7 +8,7 @@ Package.describe({
 Package.onUse(function(api) {
 
   api.versionsFrom("METEOR@1.0");
-  
+
   var packages = [
     'telescope:lib@0.21.1', //  no dependencies
     'telescope:messages@0.21.1', // lib
@@ -21,7 +21,7 @@ Package.onUse(function(api) {
   ];
 
   api.use(packages);
-  
+
   api.imply(packages);
 
   api.addFiles([
@@ -83,6 +83,10 @@ Package.onUse(function(api) {
     'public/img/default-avatar.png',
     'public/img/loading-balls.svg',
     'public/img/loading.svg',
+    'public/img/logo-cutenado-blank.png',
+    'public/img/logo-cutenado-mobile.png',
+    'public/img/logo-cutenado.png',
+    'public/img/favicon.png',
   ], 'client');
 
   api.addFiles([

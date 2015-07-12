@@ -29,18 +29,29 @@ Package.onUse(function (api) {
   // client
 
   api.addFiles([
-    'lib/client/templates/hello.html',
-    'lib/client/templates/hello.js',
+  //  'lib/client/templates/hello.html',
+  //  'lib/client/templates/hello.js',
     'lib/client/templates/custom_post_title.html',
-    'lib/client/templates/custom_post_title.js',
     'lib/client/stylesheets/custom.scss',
-    'lib/client/custom_templates.js'
+    'lib/client/custom_templates.js',
+    'lib/custom_icons.js',
+    'lib/client/templates/custom_post_vote.html',
+    'lib/client/templates/custom_post_domain.html',
+    'lib/client/templates/custom_post_share.html'
+//    'lib/client/templates/hello.html',
+
+
+
+
   ], ['client']);
 
   // server
 
+
   api.addFiles([
-    'lib/server/templates/custom_emailPostItem.handlebars'
+    'lib/server/templates/custom_emailPostItem.handlebars',
+      'lib/server/templates/custom_emailDigest.handlebars',
+        'lib/server/templates/custom_emailDigestConfirmation.handlebars'
   ], ['server']);
 
   // i18n languages (must come last)

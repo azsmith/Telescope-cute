@@ -24,7 +24,7 @@ servePostRSS = function(view, url) {
      description: description + '<a href="' + post.getPageUrl(true) + '">Discuss</a>',
      author: post.author,
      date: post.postedAt,
-     url: Posts.getLink(post),
+     url: post.getPageUrl(true),
      guid: post._id
     });
   });

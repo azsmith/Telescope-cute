@@ -1,0 +1,144 @@
+/*---------------------------------------*/
+/*                                       */
+/*   Styles for Various Screen Sizes     */
+/*                                       */
+/*---------------------------------------*/
+
+@media screen and (max-width: 30em) {
+  .newsletter-tagline {
+    margin-bottom: 0px;
+    padding: 5px 30px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .side-nav .inner-wrapper {
+    margin-left: 80px;
+    padding: 30px 42px;
+  }
+
+  .side-nav .header {
+    width: 80px;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 30px;
+  }
+  
+  .top-nav .header .logo-image a{
+   background-image: url('http://cutenado.com/packages/webbroi_telescope-theme-iris/lib/client/img/logo-cutenado.png');
+   background-repeat: no-repeat;
+   background-position: center center;
+	}
+
+}
+
+@media screen and (max-width: 699px) {
+  .posts-grid .post{
+	box-shadow: none !important;
+}
+
+  .header .logo {
+    padding: 0 35px;
+  }
+
+  .top-nav .header .logo-image a{
+   background-image: url('http://cutenado.com/packages/webbroi_telescope-theme-iris/lib/client/img/logo-cutenado-mobile.png');
+   background-repeat: no-repeat;
+   background-position: center center;
+	}
+
+  .side-nav .header {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    height: 50px;
+    border-bottom: 1px solid #bbb;
+  }
+
+  .search.empty .search-field {
+    background: #fff;
+  }
+
+  nav.navbar ul {
+    text-align: center;
+  }
+
+  .navbar-default {
+    background-color: #4e555d;
+    border-color: #e7e7e7;
+  }
+
+  .navbar-fixed-bottom {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+  .iris-tabs-tab {
+    display: inline;
+  }
+
+  .fa-plus-circle {
+    color: #dd3416;
+    background: #fff;
+    font-size: 30px;
+    height: 40px;
+    padding-right: 5px;
+  }
+
+  .fa-stack {
+    bottom: 5px;
+    width: 2.2em;
+  }
+
+  .fa-2x {
+    font-size: 1.5em;
+  }
+
+  .fa-line-chart {
+    font-size: 15px;
+  }
+
+  .fa-line-chart.fa-stack-1x {
+    line-height: 4.2em;
+  }
+
+  .fa-clock-o {
+    font-size: 25px;
+  }
+
+  .fa-clock-o.fa-stack-1x {
+    line-height: 2.51em;
+  }
+
+  .fa-star {
+    font-size: 21px;
+  }
+
+  .fa-star.fa-stack-1x {
+    line-height: 3em;
+  }
+
+  .fa-calendar-o, .fa-inbox, .fa-calendar {
+    font-size: 18px;
+  }
+
+  .fa-calendar-o.fa-stack-1x, .fa-inbox.fa-stack-1x, .fa-calendar.fa-stack-1x {
+    line-height: 3.4em;
+  }
+
+  .account-link.sign-up {
+    margin-right: 0;
+  }
+
+  .side-nav .pages-menu a {
+    display: block;
+    padding: 10px;
+    margin-bottom: 0;
+  }
+}
+

@@ -1,0 +1,12 @@
+/** Layout Styles **/
+
+.content-wrapper {
+	padding: 100px 10px 70px 10px;
+	max-width: 1000px;
+	overflow-x: hidden;
+	position: relative;
+}
+
+.grid-block {
+  background: #eee;
+}

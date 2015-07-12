@@ -1,0 +1,127 @@
+/** All the Header Styles **/
+
+.top-nav .header {
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	background-color: #fff;
+	box-shadow: 3px 3px 6px #ddd;
+	color:#666;
+	height:80px;
+}
+.main-header {
+  border-bottom: 1px solid #bbb;
+  margin: 0 0 15px 0;
+}
+
+.tagline {
+  display: none;
+}
+
+.logo.header-module.mobile-only {
+  margin-top: 0;
+  text-align: center;
+}
+.top-nav .header .logo-image {
+  top: 20px;
+}
+
+h1.logo.header-module.mobile-only .mobile-title {
+  color: #000;
+}
+
+.with-tagline, .with-tagline a, .with-tagline a:hover, .with-tagline a:visited, .without-tagline, .without-tagline a, .without-tagline a:hover, .without-tagline a:visited {
+  font-size: 36px;
+  color: #000;
+  margin: 0;
+  float: left;
+  text-decoration: none;
+}
+
+.without-tagline, .without-tagline a, .without-tagline a:hover, .without-tagline a:visited {
+  position: relative;
+  top: 7px;
+}
+
+.with-tagline a small {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #aaa;
+  letter-spacing: 2px;
+  margin-top: 3px;
+}
+
+.main-header .header-actions {
+  padding: 16px 0;
+}
+
+.main-header .header-item {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.menu-dropdown .menu-menu .menu-contents {
+  text-align: left;
+}
+
+.menu-dropdown .menu-menu {
+  display: none;
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  padding-top: 20px;
+  z-index: 10000;
+}
+
+.account-link.sign-up, .header-item.categories-menu .menu-top-level {
+  text-transform: capitalize;
+  color:#999;
+}
+
+a, .header a:link, .header a:visited {
+  color: #fff;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  color: #fff;
+  background-color:#73cfef;
+}
+
+.btn-primary:hover{
+	background-color: #3388a6;
+}
+
+.error.success-message.module {
+  background: #fff;
+  border: 1px solid #dd3416;
+  color: #dd3416;
+}
+
+.sub-header {
+  margin-bottom: 10px;
+}
+
+.header-item.categories-menu {
+  padding: 4px 0;
+  width: 100px;
+}
+
+.banner.banner {
+  margin-bottom: 10px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter-tagline {
+  font-weight: normal;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mobile-nav-open nav.mobile-only.navbar.navbar-default.navbar-fixed-bottom {
+  left: calc(100% - 60px);
+}
+

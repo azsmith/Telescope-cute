@@ -17,9 +17,9 @@ getEmbedlyData = function (url) {
       params: {
         key: embedlyKey,
         url: url,
-        image_width: thumbnailWidth,
-        image_height: thumbnailHeight,
-        image_method: 'crop'
+      //  image_width: thumbnailWidth,
+      //  image_height: thumbnailHeight,
+    //    image_method: 'crop'
       }
     });
 
