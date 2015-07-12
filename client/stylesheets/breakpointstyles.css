@@ -27,9 +27,9 @@
     overflow-y: auto;
     padding-bottom: 30px;
   }
-  
+
   .top-nav .header .logo-image a{
-   background-image: url('http://cutenado.com/packages/webbroi_telescope-theme-iris/lib/client/img/logo-cutenado.png');
+   background-image: url('/packages/telescope_core/public/img/logo-cutenado.png');
    background-repeat: no-repeat;
    background-position: center center;
 	}
@@ -46,7 +46,7 @@
   }
 
   .top-nav .header .logo-image a{
-   background-image: url('http://cutenado.com/packages/webbroi_telescope-theme-iris/lib/client/img/logo-cutenado-mobile.png');
+   background-image: url('/packages/telescope_core/public/img/logo-cutenado-mobile.png');
    background-repeat: no-repeat;
    background-position: center center;
 	}
@@ -141,4 +141,3 @@
     margin-bottom: 0;
   }
 }
-
