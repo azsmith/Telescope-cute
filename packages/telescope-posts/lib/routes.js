@@ -129,6 +129,11 @@ Posts.controllers.page = RouteController.extend({
       return this.post().title;
   },
 
+  getThumbnail: function () {
+    if (!!this.post())
+      return this.post().thumbnailUrl;
+  },
+
   onBeforeAction: function () {
     if (!this.post()) {
       if (this.postSubscription.ready()) {

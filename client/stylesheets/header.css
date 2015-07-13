@@ -22,9 +22,7 @@
   margin-top: 0;
   text-align: center;
 }
-.top-nav .header .logo-image {
-  top: 20px;
-}
+
 
 h1.logo.header-module.mobile-only .mobile-title {
   color: #000;
@@ -124,4 +122,3 @@ a, .header a:link, .header a:visited {
 .mobile-nav-open nav.mobile-only.navbar.navbar-default.navbar-fixed-bottom {
   left: calc(100% - 60px);
 }
-

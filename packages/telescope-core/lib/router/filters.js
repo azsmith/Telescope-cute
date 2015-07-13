@@ -138,7 +138,7 @@ Router._filters = {
     var props = {meta: {}, og: {}};
     var title = this.getTitle && this.getTitle();
     var description = this.getDescription && this.getDescription();
-    var image = Settings.get("siteImage");
+    var image = this.getThumbnail && this.getThumbnail();
 
     if (!!title) {
       props.title = title + " | " + Settings.get("title");

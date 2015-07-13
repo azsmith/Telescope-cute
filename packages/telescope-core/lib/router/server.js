@@ -43,6 +43,13 @@ Meteor.startup(function (){
     }
   });
 
+//Permissions
+Push.allow({
+    send: function(userId, notification) {
+        return true; // Allow all users to send
+    }
+});
+
   // Account approved email
 
   Router.route('/email/account-approved/:id?', {
