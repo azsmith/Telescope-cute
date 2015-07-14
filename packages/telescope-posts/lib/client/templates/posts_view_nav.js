@@ -7,7 +7,7 @@ var getMenuItems = function () {
     return (item.adminOnly && !Users.is.admin(Meteor.user())) || (!!Settings.get('postViews') && !_.contains(Settings.get('postViews'), item.route));
   });
 
-  return viewableItems; 
+  return viewableItems;
 };
 
 Template.posts_views_nav.helpers({

@@ -35,7 +35,7 @@ App.launchScreens({
 });
 
 // Set PhoneGap/Cordova preferences
-App.setPreference('BackgroundColor', '0xff0000ff');
+App.setPreference('BackgroundColor', '0xffffffff');
 App.setPreference('HideKeyboardFormAccessoryBar', true);
 App.setPreference('StatusBarOverlaysWebView', 'false');
 App.setPreference('StatusBarStyle', 'lightcontent');
