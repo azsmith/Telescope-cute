@@ -76,8 +76,21 @@ _.each(notifications, function (notification, notificationName) {
           var properties = notification.properties.call(this);
           var subject = notification.subject.call(properties);
           var html = Telescope.email.buildTemplate(Telescope.email.getTemplate(notification.emailTemplate)(properties));
+          var userId = notification.userId;
           Telescope.email.send(Users.getEmail(user), subject, html);
-        }
+          Push.send({
+            from: 'Cutenado',
+            title: subject,
+            text: subject,
+            query: {
+                // Ex. send to a specific user if using accounts:
+                userId: userId
+            } // Query the appCollection
+            // token: appId or token eg. "{ apn: token }"
+            // tokens: array of appId's or tokens
+            // payload: user data
+        });
+}
       }
     }
   };

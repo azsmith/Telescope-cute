@@ -21,7 +21,9 @@ Package.onUse(function(api) {
   ];
 
   api.use(packages);
-
+  Cordova.depends({
+      'org.apache.cordova.camera': '0.3.1'
+  });
   api.imply(packages);
 
   api.addFiles([
@@ -74,7 +76,8 @@ Package.onUse(function(api) {
     'lib/client/templates/nav/user_menu.js',
     'lib/client/templates/menu/menu.scss',
     'lib/client/templates/menu/menu_component.html',
-    'lib/client/templates/menu/menu_component.js'
+    'lib/client/templates/menu/menu_component.js',
+    'lib/client/platform.js',
   ], 'client');
 
   // static assets; needs cleanup

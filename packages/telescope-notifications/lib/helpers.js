@@ -10,7 +10,8 @@ Posts.getNotificationProperties = function (post) {
     profileUrl: Users.getProfileUrl(postAuthor, true),
     postUrl: Posts.getPageUrl(post, true),
     thumbnailUrl: post.thumbnailUrl,
-    linkUrl: !!post.url ? Telescope.utils.getOutgoingUrl(post.url) : Posts.getPageUrl(post, true)
+    linkUrl: !!post.url ? Telescope.utils.getOutgoingUrl(post.url) : Posts.getPageUrl(post, true),
+    userID: post.userId
   };
 
   if(post.url)
@@ -34,7 +35,8 @@ Comments.getNotificationProperties = function (comment, post) {
     authorName : Comments.getAuthorName(comment),
     postTitle: post.title,
     htmlBody: comment.htmlBody,
-    commentUrl: Comments.getPageUrl(comment, true)
+    commentUrl: Comments.getPageUrl(comment, true),
+    userID: comment.userId
   };
   return properties;
 };

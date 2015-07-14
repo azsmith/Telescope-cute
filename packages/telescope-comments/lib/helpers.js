@@ -23,10 +23,7 @@ Comments.helpers({getPageUrl: function () {return Comments.getPageUrl(this);}});
  */
 Comments.getAuthorName = function (comment) {
   var user = Meteor.users.findOne(comment.userId);
-  if (user) {
-    return user.getUserName();
-  } else {
-    return comment.author;
-  }
+  return comment.author;
+
 };
 Comments.helpers({getAuthorName: function () {return Comments.getAuthorName(this);}});

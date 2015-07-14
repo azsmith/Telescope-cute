@@ -28,6 +28,8 @@ telescope:releases
 telescope:rss
 telescope:scoring
 telescope:search
+
+
 telescope:share
 telescope:singleday
 # telescope:sitemap
@@ -41,6 +43,7 @@ telescope:update-prompt
 ############ Your Custom Packages ############
 
 # my-custom-package
-practicalmeteor:wkwebview
 mdg:reload-on-resume
 raix:push
+fastclick
+practicalmeteor:wkwebview

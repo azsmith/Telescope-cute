@@ -79,21 +79,21 @@ h3.post-heading .post-title {
 	position:relative;
 }
 
-.post-info .vote-actions, 
+.post-info .vote-actions,
 .post-info .discuss-actions,
 .post-info .share-actions{
 	display:inline-block;
 	position: absolute !important;
 }
 
-.upvoted .upvote-link, 
+.upvoted .upvote-link,
 .post-info .discuss-actions,
 .post-info .share-actions .mt-facebook,
 .post-info .share-actions .mt-twitter{
 	opacity: .4	;
 }
 
-.post-info .vote-actions:hover, 
+.post-info .vote-actions:hover,
 .post-info .discuss-actions:hover,
 .upvoted .upvote-link,
 .post-info .share-actions .mt-facebook:hover,
@@ -121,6 +121,8 @@ h3.post-heading .post-title {
   top: -40px;
   right: 15px;
  }
+
+
 
 .post-heading .discuss-actions .action-count {
   position: absolute;
@@ -178,6 +180,10 @@ a.mt-share-inline-square-sm{
 	width:inherit !important;
 }
 
+.post-heading .share-actions .as-nativeshare {
+	font-size: 28px;
+	color: #666;
+ }
 
 /** General **/
 
@@ -213,4 +219,3 @@ a.mt-share-inline-square-sm{
 .fa-calendar-o.fa-stack-1x, .fa-inbox.fa-stack-1x, .fa-calendar.fa-stack-1x {
   line-height: 3.4em;
 }
-
