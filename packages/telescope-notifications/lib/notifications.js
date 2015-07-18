@@ -78,6 +78,7 @@ _.each(notifications, function (notification, notificationName) {
           var html = Telescope.email.buildTemplate(Telescope.email.getTemplate(notification.emailTemplate)(properties));
           var userId = notification.userId;
           Telescope.email.send(Users.getEmail(user), subject, html);
+          console.log(notification)
           Push.send({
             from: 'Cutenado',
             title: subject,
@@ -85,7 +86,10 @@ _.each(notifications, function (notification, notificationName) {
             query: {
                 // Ex. send to a specific user if using accounts:
                 userId: userId
-            } // Query the appCollection
+            },
+
+        payload: { pushType: notification.emailTemplate, itemId: 'post._id'}
+         // Query the appCollection
             // token: appId or token eg. "{ apn: token }"
             // tokens: array of appId's or tokens
             // payload: user data

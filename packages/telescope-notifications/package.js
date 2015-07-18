@@ -37,6 +37,7 @@ Package.onUse(function (api) {
     'lib/client/templates/notifications_menu.js',
     'lib/client/templates/unsubscribe.html',
     'lib/client/templates/unsubscribe.js',
+    'lib/client/templates/push.js'
   ], ['client']);
 
   api.addFiles([
