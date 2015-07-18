@@ -1,37 +1,37 @@
 //When messages opens the app:
-Push.addListener('startup', function(notification) {
-
-  if(notification.payload.pushType === 'emailNewPost'){
-    Router.go('posts', {
-      _id: notification.payload.itemId
+Push.addListener('startup', function(n) {
+console.log(n);
+  if(n.payload.pushType === 'emailNewPost'){
+    Router.go('post_page', {
+      _id: n.payload.itemId
     });
   }
-  if(notification.payload.pushType === 'emailNewPendingPost'){
-    Router.go('posts', {
-      _id: notification.payload.itemId
+  if(n.payload.pushType === 'emailNewPendingPost'){
+    Router.go('post_page', {
+      _id: n.payload.itemId
     });
   }
-  if(notification.payload.pushType === 'emailPostApproved'){
-    Router.go('posts', {
-      _id: notification.payload.itemId
+  if(n.payload.pushType === 'emailPostApproved'){
+    Router.go('post_page', {
+      _id: n.payload.itemId
     });
   }
-  if(notification.payload.pushType === 'emailNewComment'){
-    Router.go('posts', {
-      _id: notification.payload.itemId
+  if(n.payload.pushType === 'emailNewComment'){
+    Router.go('post_page', {
+      _id: n.payload.itemId
     });
   }
-  if(notification.payload.pushType === 'emailNewReply'){
-    Router.go('posts', {
-      _id: notification.payload.itemId
+  if(n.payload.pushType === 'emailNewReply'){
+    Router.go('post_page', {
+      _id: n.payload.itemId
     });
   }
-  if(notification.payload.pushType === 'notification_new_comment'){
-    Router.go('posts', {
-      _id: notification.payload.itemId
+  if(n.payload.pushType === 'notification_new_comment'){
+    Router.go('post_page', {
+      _id: n.payload.itemId
     });
   }
-  else if(notification.payload.pushType === 'interest'){
+  else if(n.payload.pushType === 'interest'){
 
     alert('not implemented yet');
   }

@@ -17,7 +17,8 @@ Package.onUse(function(api) {
     'telescope:settings@0.21.1', // lib, i18n
     'telescope:users@0.21.1', // lib, i18n, settings
     'telescope:comments@0.21.1', // lib, i18n, settings, users
-    'telescope:posts@0.21.1' // lib, i18n, settings, users, comments
+    'telescope:posts@0.21.1', // lib, i18n, settings, users, comments
+    'raix:push'
   ];
 
   api.use(packages);
