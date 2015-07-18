@@ -40,6 +40,17 @@ Posts.schema = new SimpleSchema({
       type: "bootstrap-url"
     }
   },
+
+  image: {
+    type: String,
+    optional: true,
+    editableBy: ["member", "admin"],
+    autoform: {
+      afFieldInput: {
+        type: 'cloudinary'
+      }
+    }
+    },
   /**
     Title
   */
@@ -201,7 +212,7 @@ Posts.schema = new SimpleSchema({
     optional: true
   },
   /**
-    The post author's `_id`. 
+    The post author's `_id`.
   */
   userId: {
     type: String,
@@ -233,4 +244,3 @@ Posts.allow({
   update: _.partial(Telescope.allowCheck, Posts),
   remove: _.partial(Telescope.allowCheck, Posts)
 });
-

@@ -1,0 +1,10 @@
+.afCloudinary-thumbnail img {
+  width: 200px;
+}
+
+button.btn.clickable.btn-default { cursor: pointer; }
+
+.afCloudinary .bar {
+    height: 18px;
+    background: green;
+}

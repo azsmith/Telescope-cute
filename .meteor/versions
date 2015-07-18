@@ -26,6 +26,7 @@ chuangbo:cookie@1.1.0
 chuangbo:marked@0.3.5
 cmather:handlebars-server@0.2.0
 coffeescript@1.0.6
+cosio55:autoform-cloudinary@0.0.1
 dburles:collection-helpers@1.0.3
 ddp@1.1.0
 deps@1.0.7
@@ -82,6 +83,8 @@ mobile-status-bar@1.0.3
 momentjs:moment@2.10.3
 mongo@1.1.0
 mongo-livedata@1.0.8
+multiply:iron-router-progress@1.0.1
+nekojira:cloudinary-jquery-upload@0.1.0
 npm-bcrypt@0.7.8_2
 oauth@1.1.4
 oauth1@1.1.4

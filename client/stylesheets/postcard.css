@@ -183,7 +183,12 @@ a.mt-share-inline-square-sm{
 .post-heading .share-actions .as-nativeshare {
 	font-size: 28px;
 	color: #666;
+	background-color: transparent;
  }
+.share-actions .grade-a .platform-cordova .platform-web .platform-ios {
+	top: -49px;
+}
+
 
 /** General **/
 

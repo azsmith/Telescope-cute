@@ -1,0 +1,54 @@
+<template name="afCloudinary">
+  <div class="afCloudinary">
+    {{#if url}}
+      <div class="afCloudinary-thumbnail">
+        <a href="{{url}}" target="_blank"><img src="{{url}}"></a>
+      </div>
+      <a href="#" class="js-remove">Remove</a>
+    {{else}}
+      <button
+        type="button">
+        Browse
+      </button>
+    {{/if}}
+    <input
+      name="file"
+      type="file"
+      class="cloudinary-fileupload"
+      data-cloudinary-field="image_id"
+      style="display: none"
+      accept="{{accept}}"/>
+    <input {{atts}}
+      type="hidden"
+      name="url"
+      value="{{url}}"/>
+  </div>
+</template>
+
+<template name="afCloudinary_bootstrap3">
+  <div class="afCloudinary">
+    {{#if url}}
+      <div class="afCloudinary-thumbnail">
+        <a href="{{url}}" target="_blank"><img src="{{url}}"></a>
+      </div>
+      <a href="#" class="js-remove"><span class="glyphicon glyphicon-remove"></span> Remove</a>
+    {{else}}
+
+
+    {{/if}}
+
+    <input
+      name="file"
+      type="file"
+      class="cloudinary-fileupload form-control"
+      data-cloudinary-field="image_id"
+      style=""
+      accept="{{accept}}"/>
+    <input {{atts}}
+      type="hidden"
+      name="url"
+      value="{{url}}"/>
+
+    <div id="progress">
+  <div class="bar" style="width: 0%;"></div></div>  </div>
+</template>
