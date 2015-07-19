@@ -122,8 +122,6 @@ h3.post-heading .post-title {
   right: 15px;
  }
 
-
-
 .post-heading .discuss-actions .action-count {
   position: absolute;
   top: 15px;
@@ -185,8 +183,8 @@ a.mt-share-inline-square-sm{
 	color: #666;
 	background-color: transparent;
  }
-.share-actions .grade-a .platform-cordova .platform-web .platform-ios {
-	top: -49px;
+.share-actions.grade-a.platform-cordova {
+	top: -50px;
 }
 
 

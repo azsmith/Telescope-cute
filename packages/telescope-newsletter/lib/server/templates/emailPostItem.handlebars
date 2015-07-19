@@ -6,15 +6,15 @@
     <img class="post-thumbnail" src="http:{{thumbnailUrl}}"/>&nbsp;
   {{/if}}
 
-  <a href="{{postLink}}" target="_blank">{{title}}</a>
+  <a href="{{postPageLink}}" target="_blank">{{title}}</a>
 </span>
 
 <div class="post-meta">
   {{#if domain}}
     <a class="post-domain" href="">{{domain}}</a>
-    | 
+    |
   {{/if}}
-  
+
   <span class="post-submitted">
     {{#if profileUrl}}
       Submitted by <a href="{{profileUrl}}" class="comment-link" target="_blank">{{authorName}}</a>
@@ -39,4 +39,3 @@
 
 <br>
 </div>
-
