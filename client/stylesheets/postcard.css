@@ -245,3 +245,17 @@ a.mt-share-inline-square-sm{
   border-radius: 100%;
 
 }
+
+/** popup panel **/
+
+
+
+.cd-panel-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform:translate(-50%, -50%);
+  -moz-transform:translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 20000;
+}

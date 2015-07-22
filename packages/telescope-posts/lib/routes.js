@@ -11,16 +11,19 @@ Posts.controllers.list = RouteController.extend({
 
   template: "posts_list_controller",
 
-  onBeforeAction: function () {
-    var showViewsNav = (typeof this.showViewsNav === 'undefined') ? true : this.showViewsNav;
+  onBeforeAction: function() {
+    var showViewsNav = (typeof this.showViewsNav === 'undefined') ? true :
+      this.showViewsNav;
 
     if (showViewsNav) {
-      this.render('posts_list_top', {to: 'postsListTop'});
+      this.render('posts_list_top', {
+        to: 'postsListTop'
+      });
     }
     this.next();
   },
 
-  data: function () {
+  data: function() {
 
     var terms = {
       view: this.view,
@@ -36,21 +39,23 @@ Posts.controllers.list = RouteController.extend({
     };
   },
 
-  getTitle: function () {
+  getTitle: function() {
     return i18n.t(this.view);
   },
 
-  getDescription: function () {
+  getDescription: function() {
     if (Router.current().route.getName() === 'posts_default') { // return site description on root path
       return Settings.get('description');
     } else {
-      return i18n.t(_.findWhere(Telescope.menuItems.get("viewsMenu"), {label: this.view}).description);
+      return i18n.t(_.findWhere(Telescope.menuItems.get("viewsMenu"), {
+        label: this.view
+      }).description);
     }
   }
 
 });
 
-var getDefaultViewController = function () {
+var getDefaultViewController = function() {
   var defaultView = Settings.get('defaultView', 'top');
   // if view we got from settings is available in Posts.views object, use it
   if (!!Posts.controllers[defaultView]) {
@@ -61,12 +66,12 @@ var getDefaultViewController = function () {
 };
 
 // wrap in startup block to make sure Settings collection is defined
-Meteor.startup(function () {
+Meteor.startup(function() {
   Posts.controllers.default = getDefaultViewController().extend({
-    getTitle: function () {
+    getTitle: function() {
       var title = Settings.get('title', 'Telescope');
       var tagline = Settings.get('tagline');
-      var fullTitle = !!tagline ? title + ' – ' + tagline : title ;
+      var fullTitle = !!tagline ? title + ' – ' + tagline : title;
       return fullTitle;
     }
   });
@@ -114,27 +119,33 @@ Posts.controllers.page = RouteController.extend({
 
   template: 'post_page',
 
-  subscriptions: function () {
-    this.postSubscription = Telescope.subsManager.subscribe('singlePost', this.params._id);
-    this.postUsersSubscription = Telescope.subsManager.subscribe('postUsers', this.params._id);
-    this.commentSubscription = Telescope.subsManager.subscribe('commentsList', {view: 'postComments', postId: this.params._id});
+  subscriptions: function() {
+    this.postSubscription = Telescope.subsManager.subscribe('singlePost',
+      this.params._id);
+    this.postUsersSubscription = Telescope.subsManager.subscribe(
+      'postUsers', this.params._id);
+    this.commentSubscription = Telescope.subsManager.subscribe(
+      'commentsList', {
+        view: 'postComments',
+        postId: this.params._id
+      });
   },
 
   post: function() {
     return Posts.findOne(this.params._id);
   },
 
-  getTitle: function () {
+  getTitle: function() {
     if (!!this.post())
       return this.post().title;
   },
 
-  getThumbnail: function () {
+  getThumbnail: function() {
     if (!!this.post())
       return this.post().thumbnailUrl;
   },
 
-  onBeforeAction: function () {
+  onBeforeAction: function() {
     if (!this.post()) {
       if (this.postSubscription.ready()) {
         this.render('not_found');
@@ -145,7 +156,8 @@ Posts.controllers.page = RouteController.extend({
   },
 
   onRun: function() {
-    var sessionId = Meteor.default_connection && Meteor.default_connection._lastSessionId ? Meteor.default_connection._lastSessionId : null;
+    var sessionId = Meteor.default_connection && Meteor.default_connection
+      ._lastSessionId ? Meteor.default_connection._lastSessionId : null;
     Meteor.call('increasePostViews', this.params._id, sessionId);
     this.next();
   },
@@ -154,7 +166,7 @@ Posts.controllers.page = RouteController.extend({
     return this.post();
   },
 
-  onAfterAction: function () {
+  onAfterAction: function() {
     var post = this.post();
     if (post) {
       if (post.slug !== this.params.slug) {
@@ -167,7 +179,7 @@ Posts.controllers.page = RouteController.extend({
   fastRender: true
 });
 
-Meteor.startup(function () {
+Meteor.startup(function() {
 
   Router.route('/', {
     name: 'posts_default',
@@ -212,7 +224,7 @@ Meteor.startup(function () {
   Router.route('/posts/:_id/edit', {
     name: 'post_edit',
     template: 'post_edit',
-    waitOn: function () {
+    waitOn: function() {
       return [
         Telescope.subsManager.subscribe('singlePost', this.params._id),
         Telescope.subsManager.subscribe('allUsersAdmin')
@@ -234,10 +246,11 @@ Meteor.startup(function () {
     controller: Posts.controllers.page
   });
 
+
   Router.route('/posts/:_id/comment/:commentId', {
     name: 'post_page_comment',
     controller: Posts.controllers.page,
-    onAfterAction: function () {
+    onAfterAction: function() {
       // TODO: scroll to comment position
     }
   });
@@ -247,7 +260,7 @@ Meteor.startup(function () {
   Router.route('/submit', {
     name: 'post_submit',
     template: 'post_submit',
-    waitOn: function () {
+    waitOn: function() {
       return Telescope.subsManager.subscribe('allUsersAdmin');
     }
   });

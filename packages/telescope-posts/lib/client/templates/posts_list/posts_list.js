@@ -5,17 +5,17 @@ Template.posts_list.created = function() {
 };
 
 Template.posts_list.helpers({
-  postsLayout: function () {
+  postsLayout: function() {
     return Settings.get('postsLayout', 'posts-list');
   },
-  description: function () {
+  description: function() {
     var controller = Iron.controller();
     if (typeof controller.getDescription === 'function')
       return Iron.controller().getDescription();
   },
-  postsCursor : function () {
+  postsCursor: function() {
     if (this.postsCursor) { // not sure why this should ever be undefined, but it can apparently
-      var posts = this.postsCursor.map(function (post, index) {
+      var posts = this.postsCursor.map(function(post, index) {
         post.rank = index;
         return post;
       });
@@ -37,16 +37,16 @@ Template.postsListIncoming.events({
 // ----------------------------------- Load More -----------------------------------//
 
 Template.postsLoadMore.helpers({
-  postsReady: function () {
+  postsReady: function() {
     return this.postsReady;
   },
-  hasPosts: function () {
+  hasPosts: function() {
     return !!this.postsCursor.count();
   }
 });
 
 Template.postsLoadMore.events({
-  'click .more-button': function (event) {
+  'click .more-button': function(event) {
     event.preventDefault();
     if (this.controllerInstance) {
       // controller is a template

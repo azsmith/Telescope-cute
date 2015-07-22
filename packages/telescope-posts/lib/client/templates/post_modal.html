@@ -1,0 +1,27 @@
+<template name="post_modal">
+<div class="modal cd-panel fade from-right" id="modal{{_id}}">
+
+		<div class="cd-panel-header">
+			<h1>{{> post_title}}</h1>
+			<a href="#0" class="cd-panel-close" data-dismiss="modal">Close</a>
+		</div>
+    {{#if isPending}}
+<div class="grid">
+<div class="error pending-message module">
+{{_ "thanks_your_post_is_awaiting_approval"}}
+</div>
+</div>
+{{/if}}
+
+<div class="cd-panel-container">
+  <div class="cd-panel-content">
+    {{> post_item}}
+  </div>
+  {{#if body}}
+    {{> post_body}}
+  {{/if}}
+  {{> comment_submit}}
+  {{> comment_list}}
+</div>
+
+	</div> </template>

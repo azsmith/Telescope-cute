@@ -1,9 +1,9 @@
 Template.post_page.helpers({
-  isPending: function () {
+  isPending: function() {
     return this.status === Posts.config.STATUS_PENDING;
   }
 });
 
-Template.post_page.rendered = function(){
+Template.post_page.rendered = function() {
   $('body').scrollTop(0);
 };
