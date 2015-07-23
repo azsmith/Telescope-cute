@@ -1,7 +1,7 @@
 Package.describe({
   name: "telescope:daily",
   summary: "Telescope daily view",
-  version: "0.21.1",
+  version: "0.22.1",
   git: "https://github.com/TelescopeJS/Telescope.git"
 });
 
@@ -10,8 +10,8 @@ Package.onUse(function (api) {
   api.versionsFrom(['METEOR@1.0']);
 
   api.use([
-    'telescope:core@0.21.1',
-    'telescope:singleday@0.21.1',
+    'telescope:core@0.22.1',
+    'telescope:singleday@0.22.1',
   ]);
 
   api.addFiles([
@@ -21,10 +21,13 @@ Package.onUse(function (api) {
   ], ['client', 'server']);
 
   api.addFiles([
-    'lib/client/templates/posts_daily.html',
     'lib/client/templates/after_day.html',
     'lib/client/templates/before_day.html',
+    'lib/client/templates/posts_daily.html',
     'lib/client/templates/posts_daily.js',
+    'lib/client/templates/day_heading.html',
+    'lib/client/templates/load_more_days.html',
+    'lib/client/templates/load_more_days.js',
     'lib/client/stylesheets/daily.scss',
     ], ['client']);
 

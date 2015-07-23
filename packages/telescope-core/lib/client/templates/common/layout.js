@@ -1,8 +1,8 @@
 Template.layout.helpers({
-  navLayout: function () {
+  navLayout: function() {
     return Settings.get('navLayout', 'top-nav');
   },
-  pageName : function(){
+  pageName: function() {
     return Telescope.utils.getCurrentTemplate();
   },
   extraCode: function() {
@@ -10,26 +10,17 @@ Template.layout.helpers({
   }
 });
 
-Template.layout.created = function(){
+Template.layout.onCreated(function() {
   Session.set('currentScroll', null);
-};
+});
 
-Template.layout.rendered = function(){
-//Infinite Scroll
-    $(window).on("scroll", function() {
-    var scrollHeight = $(document).height();
-    var scrollPosition = $(window).height() + $(window).scrollTop();
-    if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-      $('.more-button').click();
-      console.log("bottom!");
-    }
-  });
-  
+Template.layout.onRendered(function() {
   var currentScroll = Session.get('currentScroll');
-  if(currentScroll){
+  if (currentScroll) {
     $('body').scrollTop(currentScroll);
     Session.set('currentScroll', null);
   }
+
 
   // favicon
   var link = document.createElement('link');
@@ -42,10 +33,10 @@ Template.layout.rendered = function(){
   var canonicalLink = document.createElement('link');
   canonicalLink.rel = 'canonical';
   document.getElementsByTagName('head')[0].appendChild(canonicalLink);
-};
+});
 
 Template.layout.events({
-  'click .inner-wrapper': function (e) {
+  'click .inner-wrapper': function(e) {
     if ($('body').hasClass('mobile-nav-open')) {
       e.preventDefault();
       $('body').removeClass('mobile-nav-open');

@@ -1,0 +1,14 @@
+<template name="submit_button">
+  {{#if canPost}}
+<<<<<<< HEAD
+    <a id="submit" class="submit btn header-submodule btn-primary desktop-only" href="/submit">{{_ "+ add a cute"}}</a>
+    <a id="submit" class="mobile-only mobile-submit-button button" href="/submit">{{{icon "plus"}}}</a>
+  {{else}}
+  	<a class="mobile-only mobile-signin-button button" href="{{pathFor route='atSignIn'}}">{{{icon "sign-in"}}}</a>
+=======
+    <div class="submit-button {{moduleClass}}">
+        <a id="submit" class="submit btn btn-primary" href="/submit">{{_ "post"}}</a>
+    </div>
+>>>>>>> 3dfebb6af2c9cd003e79e2bf219e71ca53965d3e
+  {{/if}}
+</template>

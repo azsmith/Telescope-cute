@@ -1,0 +1,10 @@
+<template name="post_title">
+<<<<<<< HEAD
+  <a href="{{postLink}}" class="post-title" target="{{postTarget}}">{{title}}</a>
+</template>
+=======
+  <h3 class="post-title">
+    <a href="{{postLink}}" class="post-title" target="{{postTarget}}">{{title}}</a>
+  </h3>
+</template>
+>>>>>>> 3dfebb6af2c9cd003e79e2bf219e71ca53965d3e

@@ -1,6 +1,6 @@
 <template name="newsletter_banner">
-  {{#if showBanner}}
-    <div class="content-wrapper">
+  <div class="newsletter-banner-wrapper content-wrapper">
+    {{#if showBanner}}
       <div class="newsletter-banner grid-module grid banner">
         <form>
           <h4 class="newsletter-tagline">{{_ "receive_the_best_of"}} {{siteName}} {{_ "right_in_your_inbox"}}</h4>
@@ -10,8 +10,8 @@
           <button class="button newsletter-button btn btn-primary">{{_ "get_newsletter"}}<span class="button-loader"><img src="/packages/telescope_core/public/img/loading-balls.svg"/></span></button>
         </form>
         <h4 class="newsletter-subscribed">{{_ "thanks_for_subscribing"}}</h4>
-        <a href="#" class="newsletter-dismiss banner-dismiss">×</a>
+        <a href="#" class="newsletter-dismiss banner-dismiss">{{{icon "close"}}}</a>
       </div>
-    </div>
-  {{/if}}
+    {{/if}}
+  </div>
 </template>

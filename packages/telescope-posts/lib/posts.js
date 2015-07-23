@@ -35,6 +35,7 @@ Posts.schema = new SimpleSchema({
   url: {
     type: String,
     optional: true,
+    max: 500,
     editableBy: ["member", "admin"],
     autoform: {
       type: "bootstrap-url"
@@ -57,6 +58,7 @@ Posts.schema = new SimpleSchema({
   title: {
     type: String,
     optional: false,
+    max: 500,
     editableBy: ["member", "admin"]
   },
   /**
@@ -72,6 +74,7 @@ Posts.schema = new SimpleSchema({
   body: {
     type: String,
     optional: true,
+    max: 3000,
     editableBy: ["member", "admin"],
     autoform: {
       rows: 5
@@ -217,6 +220,7 @@ Posts.schema = new SimpleSchema({
   userId: {
     type: String,
     optional: true,
+    // regEx: SimpleSchema.RegEx.Id,
     editableBy: ["admin"],
     autoform: {
       group: 'admin',

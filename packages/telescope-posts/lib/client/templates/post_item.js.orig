@@ -1,0 +1,32 @@
+var post = {};
+
+Template.post_item.created = function() {
+  post = this.data;
+};
+
+Template.post_item.helpers({
+  moduleContext: function() { // not used for now
+    var module = this;
+    module.templateClass = Telescope.utils.camelToDash(this.template) +
+      ' ' + this.position + ' cell';
+    module.post = post;
+    return module;
+  },
+  postClass: function() {
+    var post = this;
+<<<<<<< HEAD
+    var postClass = "author-" + Telescope.utils.slugify(post.author);
+=======
+    var postClass = "post ";
+    
+    postClass += "author-"+Telescope.utils.slugify(post.author)+" ";
+
+    if (this.sticky) {
+      postClass += "sticky ";
+    }
+
+>>>>>>> 3dfebb6af2c9cd003e79e2bf219e71ca53965d3e
+    postClass = Telescope.callbacks.run(post, postClass);
+    return postClass;
+  }
+});

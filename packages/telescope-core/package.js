@@ -1,7 +1,7 @@
 Package.describe({
   name: "telescope:core",
   summary: "Telescope core package",
-  version: "0.21.1",
+  version: "0.22.1",
   git: "https://github.com/TelescopeJS/Telescope.git"
 });
 
@@ -10,20 +10,20 @@ Package.onUse(function(api) {
   api.versionsFrom("METEOR@1.0");
 
   var packages = [
-    'telescope:lib@0.21.1', //  no dependencies
-    'telescope:messages@0.21.1', // lib
-    'telescope:i18n@0.21.1', // lib
-    'telescope:events@0.21.1', // lib, i18n
-    'telescope:settings@0.21.1', // lib, i18n
-    'telescope:users@0.21.1', // lib, i18n, settings
-    'telescope:comments@0.21.1', // lib, i18n, settings, users
-    'telescope:posts@0.21.1', // lib, i18n, settings, users, comments
+    'telescope:lib@0.22.1', //  no dependencies
+    'telescope:messages@0.22.1', // lib
+    'telescope:i18n@0.22.1', // lib
+    'telescope:events@0.22.1', // lib, i18n
+    'telescope:settings@0.22.1', // lib, i18n
+    'telescope:users@0.22.1', // lib, i18n, settings
+    'telescope:comments@0.22.1', // lib, i18n, settings, users
+    'telescope:posts@0.22.1', // lib, i18n, settings, users, comments
     'raix:push'
   ];
 
   api.use(packages);
   Cordova.depends({
-      'org.apache.cordova.camera': '0.3.1'
+    'org.apache.cordova.camera': '0.3.1'
   });
   api.imply(packages);
 
@@ -41,8 +41,6 @@ Package.onUse(function(api) {
     'lib/client/handlebars.js',
     'lib/client/main.html',
     'lib/client/main.js',
-    'lib/client/templates/modules/module.html',
-    'lib/client/templates/modules/module.js',
     'lib/client/templates/modules/modules.html',
     'lib/client/templates/modules/modules.js',
     'lib/client/templates/admin/admin_menu.html',
@@ -51,8 +49,8 @@ Package.onUse(function(api) {
     'lib/client/templates/admin/admin_wrapper.js',
     'lib/client/templates/common/css.html',
     'lib/client/templates/common/css.js',
-    'lib/client/templates/common/footer.html',
-    'lib/client/templates/common/footer.js',
+    'lib/client/templates/common/footer_code.html',
+    'lib/client/templates/common/footer_code.js',
     'lib/client/templates/common/layout.html',
     'lib/client/templates/common/layout.js',
     'lib/client/templates/errors/already_logged_in.html',
@@ -70,8 +68,8 @@ Package.onUse(function(api) {
     'lib/client/templates/nav/logo.js',
     'lib/client/templates/nav/mobile_nav.html',
     'lib/client/templates/nav/mobile_nav.js',
-    'lib/client/templates/nav/nav.html',
-    'lib/client/templates/nav/nav.js',
+    'lib/client/templates/nav/header.html',
+    'lib/client/templates/nav/header.js',
     'lib/client/templates/nav/submit_button.html',
     'lib/client/templates/nav/user_menu.html',
     'lib/client/templates/nav/user_menu.js',

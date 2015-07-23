@@ -1,0 +1,14 @@
+Template.post_page.helpers({
+<<<<<<< HEAD
+  isPending: function() {
+    return this.status === Posts.config.STATUS_PENDING;
+=======
+  isPending: function () {
+    return this.post && this.post.status === Posts.config.STATUS_PENDING;
+>>>>>>> 3dfebb6af2c9cd003e79e2bf219e71ca53965d3e
+  }
+});
+
+Template.post_page.rendered = function() {
+  $('body').scrollTop(0);
+};

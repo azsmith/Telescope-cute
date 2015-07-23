@@ -16,7 +16,8 @@
  * A directory of icon keys and icon codes
  */
 Telescope.utils.icons = {
-  open: "plus",
+  expand: "plus",
+  collapse: "minus",
   close: "minus",
   upvote: "heart",
   externallink: "external-link",

@@ -11,17 +11,8 @@ Posts.controllers.list = RouteController.extend({
 
   template: "posts_list_controller",
 
-  onBeforeAction: function() {
-    var showViewsNav = (typeof this.showViewsNav === 'undefined') ? true :
-      this.showViewsNav;
+  showViewsNav: true,
 
-    if (showViewsNav) {
-      this.render('posts_list_top', {
-        to: 'postsListTop'
-      });
-    }
-    this.next();
-  },
 
   data: function() {
 
@@ -163,7 +154,9 @@ Posts.controllers.page = RouteController.extend({
   },
 
   data: function() {
-    return this.post();
+    return {
+      post: this.post()
+    };
   },
 
   onAfterAction: function() {
@@ -245,7 +238,6 @@ Meteor.startup(function() {
     name: 'post_page',
     controller: Posts.controllers.page
   });
-
 
   Router.route('/posts/:_id/comment/:commentId', {
     name: 'post_page_comment',
